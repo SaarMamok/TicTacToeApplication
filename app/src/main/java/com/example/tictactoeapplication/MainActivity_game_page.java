@@ -10,16 +10,17 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity_game_page extends AppCompatActivity {
 
     Boolean flag_X = true;
     int matrix[][] = new int[3][3]; // 1=X  2=O
     int fullMatrix = 0;
-    private ImageView empty_win;
-    private ImageView empty_winner_message;
     int player_X = 0;
     int player_O = 0;
+    ImageView empty_win;
+    ImageView empty_winner_message;
 
     ImageButton btn_1;
     ImageButton btn_2;
@@ -33,16 +34,10 @@ public class MainActivity_game_page extends AppCompatActivity {
 
     Button newGame;
 
-    public void addToMatrix(int XorO, int row, int col) {
-        matrix[row][col] = XorO;
-    }
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_game_page);
-
 
         btn_1 = findViewById(R.id.main_button1_btn);
         btn_2 = findViewById(R.id.main_button2_btn);
@@ -255,7 +250,7 @@ public class MainActivity_game_page extends AppCompatActivity {
 
     public void isWin() {
         boolean flag_equality = true;
-        // winner: X
+        // winner is: X
         if(matrix[0][0] == 1 && matrix[1][0] == 1 && matrix[2][0] == 1) { // left
             empty_win.setImageResource(R.drawable.mark3);
             player_X++;
@@ -305,7 +300,7 @@ public class MainActivity_game_page extends AppCompatActivity {
             flag_equality = false;
         }
 
-        // winner: O
+        // winner is: O
         if(matrix[0][0] == 2 && matrix[1][0] == 2 && matrix[2][0] == 2) { // left
             empty_win.setImageResource(R.drawable.mark3);
             player_O++;
@@ -374,7 +369,10 @@ public class MainActivity_game_page extends AppCompatActivity {
             newGame.setVisibility(View.VISIBLE);
         }
 
+    }
 
+    public void addToMatrix(int XorO, int row, int col) {
+        matrix[row][col] = XorO;
     }
 
 
