@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity_game_page">
+
+    <ImageView
+        android:id="@+id/mainGP_background_image"
+        android:layout_width="388dp"
+        android:layout_height="542dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/back"
+        tools:layout_editor_absoluteY="104dp" />
+
+    <ImageButton
+        android:id="@+id/main_button7_btn"
+        android:layout_width="93dp"
+        android:layout_height="92dp"
+        android:background="@drawable/empty"
+        app:layout_constraintBottom_toBottomOf="@+id/mainGP_background_image"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/mainGP_background_image"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="@+id/mainGP_background_image"
+        app:layout_constraintTop_toTopOf="@+id/mainGP_background_image"
+        app:layout_constraintVertical_bias="0.784"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageButton
+        android:id="@+id/main_button8_btn"
+        android:layout_width="93dp"
+        android:layout_height="92dp"
+        android:background="@drawable/empty"
+        app:layout_constraintBottom_toBottomOf="@+id/mainGP_background_image"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/mainGP_background_image"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="@+id/mainGP_background_image"
+        app:layout_constraintTop_toTopOf="@+id/mainGP_background_image"
+        app:layout_constraintVertical_bias="0.784"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageButton
+        android:id="@+id/main_button9_btn"
+        android:layout_width="93dp"
+        android:layout_height="92dp"
+        android:background="@drawable/empty"
+        app:layout_constraintBottom_toBottomOf="@+id/mainGP_background_image"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/mainGP_background_image"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="@+id/mainGP_background_image"
+        app:layout_constraintTop_toTopOf="@+id/mainGP_background_image"
+        app:layout_constraintVertical_bias="0.784"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageButton
+        android:id="@+id/main_button1_btn"
+        android:layout_width="93dp"
+        android:layout_height="92dp"
+        android:background="@drawable/empty"
+        app:layout_constraintBottom_toBottomOf="@+id/mainGP_background_image"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/mainGP_background_image"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="@+id/mainGP_background_image"
+        app:layout_constraintTop_toTopOf="@+id/mainGP_background_image"
+        app:layout_constraintVertical_bias="0.211"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageButton
+        android:id="@+id/main_button2_btn"
+        android:layout_width="93dp"
+        android:layout_height="92dp"
+        android:background="@drawable/empty"
+        app:layout_constraintBottom_toBottomOf="@+id/mainGP_background_image"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/mainGP_background_image"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="@+id/mainGP_background_image"
+        app:layout_constraintTop_toTopOf="@+id/mainGP_background_image"
+        app:layout_constraintVertical_bias="0.211"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageButton
+        android:id="@+id/main_button3_btn"
+        android:layout_width="93dp"
+        android:layout_height="92dp"
+        android:background="@drawable/empty"
+        app:layout_constraintBottom_toBottomOf="@+id/mainGP_background_image"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/mainGP_background_image"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="@+id/mainGP_background_image"
+        app:layout_constraintTop_toTopOf="@+id/mainGP_background_image"
+        app:layout_constraintVertical_bias="0.211"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageButton
+        android:id="@+id/main_button4_btn"
+        android:layout_width="93dp"
+        android:layout_height="92dp"
+        android:background="@drawable/empty"
+        app:layout_constraintBottom_toBottomOf="@+id/mainGP_background_image"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/mainGP_background_image"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="@+id/mainGP_background_image"
+        app:layout_constraintTop_toTopOf="@+id/mainGP_background_image"
+        app:layout_constraintVertical_bias="0.502"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageButton
+        android:id="@+id/main_button5_btn"
+        android:layout_width="93dp"
+        android:layout_height="92dp"
+        android:background="@drawable/empty"
+        app:layout_constraintBottom_toBottomOf="@+id/mainGP_background_image"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/mainGP_background_image"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="@+id/mainGP_background_image"
+        app:layout_constraintTop_toTopOf="@+id/mainGP_background_image"
+        app:layout_constraintVertical_bias="0.502"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageButton
+        android:id="@+id/main_button6_btn"
+        android:layout_width="93dp"
+        android:layout_height="92dp"
+        android:background="@drawable/empty"
+        app:layout_constraintBottom_toBottomOf="@+id/mainGP_background_image"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/mainGP_background_image"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="@+id/mainGP_background_image"
+        app:layout_constraintTop_toTopOf="@+id/mainGP_background_image"
+        app:layout_constraintVertical_bias="0.502"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/mainGP_emptyleft_image"
+        android:layout_width="400dp"
+        android:layout_height="719dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainGP_background_image"
+        app:layout_constraintTop_toTopOf="@+id/mainGP_background_image"
+        app:srcCompat="@drawable/empty"
+        tools:layout_editor_absoluteX="7dp" />
+
+    <ImageView
+        android:id="@+id/mainGP_emptyRight_image"
+        android:layout_width="350dp"
+        android:layout_height="752dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainGP_background_image"
+        app:layout_constraintTop_toTopOf="@+id/mainGP_background_image"
+        app:layout_constraintVertical_bias="0.257"
+        app:srcCompat="@drawable/empty"
+        tools:layout_editor_absoluteX="55dp" />
+
+    <ImageView
+        android:id="@+id/mainGP_emptyWin_image"
+        android:layout_width="402dp"
+        android:layout_height="393dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainGP_background_image"
+        app:layout_constraintTop_toTopOf="@+id/mainGP_background_image"
+        app:srcCompat="@drawable/empty"
+        tools:layout_editor_absoluteX="7dp" />
+
+    <ImageView
+        android:id="@+id/mainGP_emptyWinnerMessage_image"
+        android:layout_width="357dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mainGP_background_image"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainGP_emptyWin_image"
+        app:srcCompat="@drawable/empty" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
