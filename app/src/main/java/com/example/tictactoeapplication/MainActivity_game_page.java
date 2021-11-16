@@ -2,6 +2,7 @@ package com.example.tictactoeapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.opengl.Matrix;
 import android.os.Bundle;
 import android.view.View;
@@ -14,10 +15,23 @@ public class MainActivity_game_page extends AppCompatActivity {
 
     Boolean flag_X = true;
     int matrix[][] = new int[3][3]; // 1=X  2=O
+    int fullMatrix = 0;
     private ImageView empty_win;
     private ImageView empty_winner_message;
     int player_X = 0;
     int player_O = 0;
+
+    ImageButton btn_1;
+    ImageButton btn_2;
+    ImageButton btn_3;
+    ImageButton btn_4;
+    ImageButton btn_5;
+    ImageButton btn_6;
+    ImageButton btn_7;
+    ImageButton btn_8;
+    ImageButton btn_9;
+
+    Button newGame;
 
     public void addToMatrix(int XorO, int row, int col) {
         matrix[row][col] = XorO;
@@ -29,18 +43,31 @@ public class MainActivity_game_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_game_page);
 
-        ImageButton btn_1 = findViewById(R.id.main_button1_btn);
-        ImageButton btn_2 = findViewById(R.id.main_button2_btn);
-        ImageButton btn_3 = findViewById(R.id.main_button3_btn);
-        ImageButton btn_4 = findViewById(R.id.main_button4_btn);
-        ImageButton btn_5 = findViewById(R.id.main_button5_btn);
-        ImageButton btn_6 = findViewById(R.id.main_button6_btn);
-        ImageButton btn_7 = findViewById(R.id.main_button7_btn);
-        ImageButton btn_8 = findViewById(R.id.main_button8_btn);
-        ImageButton btn_9 = findViewById(R.id.main_button9_btn);
+
+        btn_1 = findViewById(R.id.main_button1_btn);
+        btn_2 = findViewById(R.id.main_button2_btn);
+        btn_3 = findViewById(R.id.main_button3_btn);
+        btn_4 = findViewById(R.id.main_button4_btn);
+        btn_5 = findViewById(R.id.main_button5_btn);
+        btn_6 = findViewById(R.id.main_button6_btn);
+        btn_7 = findViewById(R.id.main_button7_btn);
+        btn_8 = findViewById(R.id.main_button8_btn);
+        btn_9 = findViewById(R.id.main_button9_btn);
 
         empty_win = findViewById(R.id.mainGP_emptyWin_image);
         empty_winner_message = findViewById(R.id.mainGP_emptyWinnerMessage_image);
+
+        newGame = findViewById(R.id.mainGP_newGame_btn);
+        newGame.setVisibility(View.GONE);
+        Intent goToGamePage = new Intent(getApplicationContext(), MainActivity_game_page.class);
+        newGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(goToGamePage);
+            }
+        });
+
+        empty_winner_message.setImageResource(R.drawable.xplay);
 
         btn_1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,13 +77,17 @@ public class MainActivity_game_page extends AppCompatActivity {
                     btn_1.setEnabled(false);
                     flag_X = false;
                     addToMatrix(1, 0, 0);
+                    empty_winner_message.setImageResource(R.drawable.oplay);
                 } else {
                     btn_1.setImageResource(R.drawable.o);
                     btn_1.setEnabled(false);
                     flag_X = true;
                     addToMatrix(2, 0, 0);
+                    empty_winner_message.setImageResource(R.drawable.xplay);
                 }
+                fullMatrix++;
                 isWin();
+
             }
         });
         btn_2.setOnClickListener(new View.OnClickListener() {
@@ -67,12 +98,15 @@ public class MainActivity_game_page extends AppCompatActivity {
                     btn_2.setEnabled(false);
                     flag_X = false;
                     addToMatrix(1, 0, 1);
+                    empty_winner_message.setImageResource(R.drawable.oplay);
                 } else {
                     btn_2.setImageResource(R.drawable.o);
                     btn_2.setEnabled(false);
                     flag_X = true;
                     addToMatrix(2, 0, 1);
+                    empty_winner_message.setImageResource(R.drawable.xplay);
                 }
+                fullMatrix++;
                 isWin();
             }
         });
@@ -84,12 +118,15 @@ public class MainActivity_game_page extends AppCompatActivity {
                     btn_3.setEnabled(false);
                     flag_X = false;
                     addToMatrix(1, 0, 2);
+                    empty_winner_message.setImageResource(R.drawable.oplay);
                 } else {
                     btn_3.setImageResource(R.drawable.o);
                     btn_3.setEnabled(false);
                     flag_X = true;
                     addToMatrix(2, 0, 2);
+                    empty_winner_message.setImageResource(R.drawable.xplay);
                 }
+                fullMatrix++;
                 isWin();
             }
         });
@@ -101,12 +138,15 @@ public class MainActivity_game_page extends AppCompatActivity {
                     btn_4.setEnabled(false);
                     flag_X = false;
                     addToMatrix(1, 1, 0);
+                    empty_winner_message.setImageResource(R.drawable.oplay);
                 } else {
                     btn_4.setImageResource(R.drawable.o);
                     btn_4.setEnabled(false);
                     flag_X = true;
                     addToMatrix(2, 1, 0);
+                    empty_winner_message.setImageResource(R.drawable.xplay);
                 }
+                fullMatrix++;
                 isWin();
             }
         });
@@ -118,12 +158,15 @@ public class MainActivity_game_page extends AppCompatActivity {
                     btn_5.setEnabled(false);
                     flag_X = false;
                     addToMatrix(1, 1, 1);
+                    empty_winner_message.setImageResource(R.drawable.oplay);
                 } else {
                     btn_5.setImageResource(R.drawable.o);
                     btn_5.setEnabled(false);
                     flag_X = true;
                     addToMatrix(2, 1, 1);
+                    empty_winner_message.setImageResource(R.drawable.xplay);
                 }
+                fullMatrix++;
                 isWin();
             }
         });
@@ -135,12 +178,15 @@ public class MainActivity_game_page extends AppCompatActivity {
                     btn_6.setEnabled(false);
                     flag_X = false;
                     addToMatrix(1, 1, 2);
+                    empty_winner_message.setImageResource(R.drawable.oplay);
                 } else {
                     btn_6.setImageResource(R.drawable.o);
                     btn_6.setEnabled(false);
                     flag_X = true;
                     addToMatrix(2, 1, 2);
+                    empty_winner_message.setImageResource(R.drawable.xplay);
                 }
+                fullMatrix++;
                 isWin();
             }
         });
@@ -152,12 +198,15 @@ public class MainActivity_game_page extends AppCompatActivity {
                     btn_7.setEnabled(false);
                     flag_X = false;
                     addToMatrix(1, 2, 0);
+                    empty_winner_message.setImageResource(R.drawable.oplay);
                 } else {
                     btn_7.setImageResource(R.drawable.o);
                     btn_7.setEnabled(false);
                     flag_X = true;
                     addToMatrix(2, 2, 0);
+                    empty_winner_message.setImageResource(R.drawable.xplay);
                 }
+                fullMatrix++;
                 isWin();
             }
         });
@@ -169,12 +218,15 @@ public class MainActivity_game_page extends AppCompatActivity {
                     btn_8.setEnabled(false);
                     flag_X = false;
                     addToMatrix(1, 2, 1);
+                    empty_winner_message.setImageResource(R.drawable.oplay);
                 } else {
                     btn_8.setImageResource(R.drawable.o);
                     btn_8.setEnabled(false);
                     flag_X = true;
                     addToMatrix(2, 2, 1);
+                    empty_winner_message.setImageResource(R.drawable.xplay);
                 }
+                fullMatrix++;
                 isWin();
             }
         });
@@ -186,12 +238,15 @@ public class MainActivity_game_page extends AppCompatActivity {
                     btn_9.setEnabled(false);
                     flag_X = false;
                     addToMatrix(1, 2, 2);
+                    empty_winner_message.setImageResource(R.drawable.oplay);
                 } else {
                     btn_9.setImageResource(R.drawable.o);
                     btn_9.setEnabled(false);
                     flag_X = true;
                     addToMatrix(2, 2, 2);
+                    empty_winner_message.setImageResource(R.drawable.xplay);
                 }
+                fullMatrix++;
                 isWin();
             }
         });
@@ -301,9 +356,26 @@ public class MainActivity_game_page extends AppCompatActivity {
         }
 
         // equality
-        if(flag_equality)
+        if(fullMatrix == 9) {
             empty_winner_message.setImageResource(R.drawable.nowin);
+            newGame.setVisibility(View.VISIBLE);
+        }
+
+        if(!flag_equality || fullMatrix == 9){
+            btn_1.setEnabled(false);
+            btn_2.setEnabled(false);
+            btn_3.setEnabled(false);
+            btn_4.setEnabled(false);
+            btn_5.setEnabled(false);
+            btn_6.setEnabled(false);
+            btn_7.setEnabled(false);
+            btn_8.setEnabled(false);
+            btn_9.setEnabled(false);
+            newGame.setVisibility(View.VISIBLE);
+        }
+
 
     }
+
 
 }

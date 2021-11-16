@@ -11,12 +11,13 @@
         android:layout_width="333dp"
         android:layout_height="90dp"
         android:text="Tic Tac Toe"
+        android:textColor="#474545"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.263" />
+        app:layout_constraintVertical_bias="0.151" />
 
     <Button
         android:id="@+id/main_start_btn"
@@ -25,10 +26,23 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="150dp"
+        android:backgroundTint="#474545"
         android:text="Start"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="198dp"
+        android:layout_height="245dp"
+        android:rotation="-25"
+        app:layout_constraintBottom_toTopOf="@+id/main_start_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_title_text"
+        app:layout_constraintVertical_bias="0.348"
+        app:srcCompat="@drawable/tictactoebackground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
